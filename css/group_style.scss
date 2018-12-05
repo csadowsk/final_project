@@ -1,0 +1,55 @@
+/*
+    Dolly Sadowski
+    A01025256
+
+    Final Project .SCSS for our group pages
+
+    Info (team page) + Rational
+    Cite Map
+    Quiz
+    Prototype (
+*/
+@import url("cssreset.css");
+@import url("navbar-style.css");
+
+$white: white;
+$black: black;
+$light_gray: #BBBBBB;
+$dark_gray: #6B6B6B;
+
+/*Contains entire visable contents of the website*/
+body {
+
+    display: flex;
+    background-color: $white;
+
+    /*This is for <main></main> it should take up all the remaining space*/
+    .container {
+        flex: 1;
+        display: grid;
+        margin-left: 100px;
+        margin-right: 100px;
+        border: 3px solid $black;
+        background-color: $dark_gray;
+
+        /*This is for <section></section>*/
+        #content {
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 450px;
+            grid-gap: 50px;
+        }
+    }
+    footer {
+        hr {
+            margin: 10px;
+            color:$black;
+            border-width: 3px;
+            opacity: 50%;
+            
+        }
+    }
+
+
+
+}
+
