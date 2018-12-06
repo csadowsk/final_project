@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="navbar-style.css" media="all">
+<script src="navbar-script.js "></script>
+
+
+</head>
+<body>
+
+<div class="topnav" id="myTopnav">
+  <ul>
+      <li><a href="#Intro" class="active">Intro</a></li>
+      <li><a href="#Sitemap">Sitemap</a></li>
+      <li><a href="#Rationale">Rationale</a></li>
+      <li><div class="dropdown">
+        <button class="dropbtn" onclick="showList(this)">Prototype 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <ul>
+          <li><a href="#">Comp1950 1</a></li>
+          <li><a href="#">Comp1950 2</a></li>
+          <li><a href="#">Comp1950 3</a></li>
+        </ul>
+        </div>
+      </div> </li>
+      <li><a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a></li>
+</ul>
+</div>
+
+<div style="padding-left:16px">
+  <h2>This is meta navigation bar.</h2>
+</div>
+
+
+
+</body>
+</html>
