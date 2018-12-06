@@ -10,48 +10,81 @@
        
         <meta charset="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-		
-        <link href="/students/mtajfar/css/style.css" rel="stylesheet" title="Default" media="all"/>
-       
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>	
-        	
-        <script src="/students/mtajfar/js/mobileNav.js"></script>
-    </head>
-        
-    <body >
-        <header>
-            
-            <a href="#"><img src="/students/mtajfar/images/logo2.jpg" alt="logo" /></a>
-            
-        </header>
-        <nav>	
-                
-                <p id="menutoggle">Menu<br /><img src="/students/mtajfar/images/vector_menu.png" /></p>	
-               
 
-		        <ul id="navlist">
-                    <li id="active"><a href="#" id="current">Intro</a></li>
-                    
-                    <li><a href="/students/mtajfar/sitemap/sitemap.html">Sitemap</a></li>
-                    <li><a href="/students/mtajfar/rationale/ratinale.html">Rationale</a></li>
-                    <li><a id="nav_popup">prototypet</a>
-                        <ul style="display: none">
-                            <li><a href="/students/mtajfar/prototype/home.html">Home</a></li>
-                            <li><a href="/students/mtajfar/prototype/lecture.html">Lecture</a></li>
-                            <li><a href="/students/mtajfar/prototype/quiz.html">Quiz</a></li>
-                        </ul>
-                    </li>
-                </ul>
+        <!-- ADD CSS FILES HERE , ASK DOLLY THAT MEDIA SHOULD BE "SCREEN" OR "ALL" ??????????????????????????????????? -->
+        <link href="css/groupstyle.css" rel="stylesheet" title="Default" media="all"/>
+        <link rel="stylesheet" href="print_styles.css"   media="print" />
+
+        <!-- ADD for Setareh's Nav bar -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="navbar-style.css">
+
+        <!-- jQuary Library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>	
+
+        <!-- Setareh's Nav bar javascript -->	
+        <script src="navbar-script.js"></script>
+    </head>
+
+     <!-- body taged by CONTAINER Id-->   
+    <body id="container">
+        <!-- Header Start-->
+        <header>
+            <!--ask Dolly which is it the correct image or i should change it ??????????????????????????????????????????????????-->
+            <a href="https://www.bcit.ca/"><img src="images/bcit_logo_white.png" alt="BCIT logo" /></a>
+            <h1>BRITISH COLUMBIA INSTITUTE OF TECHNOLOGY</h1>
+        </header>
+        <!-- Header End-->
+
+        <!-- Nav bar Start-->
+        <nav>
+            <!-- Stareh's Nav bar, Ask her to use <ul> and <li> tag for navigation bar ???????????????????????????????-->
+            <div class="navbar">
+                <div class="dropdown">
+                    <button class="dropbtn" onclick="myFunction()">Prototype
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content" id="myDropdown">
+                        <a href="prototype/home.html">Home</a>
+                        <a href="prototype/lecture.html">Lecture</a>
+                        <a href="prototype/quiz.html">Quiz</a>
+                    </div>
+                </div> 
+                    <a href="#Intro" class="static-items">Intro</a>
+                    <a href="sitemap/sitemap.html" class="static-items">Sitemap</a>
+                    <a href="rationale/ratinale.html" class="static-items">Rational</a>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                    </a>
+            </div>
+            <!-- Mehrnaz nav bar    
+            <p id="menutoggle">Menu<br /><img src="/students/mtajfar/images/vector_menu.png" /></p>	
+            
+
+            <ul id="navlist">
+                <li id="active"><a href="#" id="current">Intro</a></li>
+                
+                <li><a href="/students/mtajfar/sitemap/sitemap.html">Sitemap</a></li>
+                <li><a href="/students/mtajfar/rationale/ratinale.html">Rationale</a></li>
+                <li><a id="nav_popup">prototypet</a>
+                    <ul style="display: none">
+                        <li><a href="/students/mtajfar/prototype/home.html">Home</a></li>
+                        <li><a href="/students/mtajfar/prototype/lecture.html">Lecture</a></li>
+                        <li><a href="/students/mtajfar/prototype/quiz.html">Quiz</a></li>
+                    </ul>
+                </li>
+            </ul>
+            --> 
         </nav>
         <br />
-        <h1>About us!</h1>
-
-        <div id="container">
-	        <div id="boxModel1">
+        <h2>About us!</h2>
+        <br />
+        
+	        <div class="about_us">
                 <h2>Mehrnaz Tajfar</h2>
                 <br />
                 
-		         <p><img  src="/students/mtajfar/images/Mehrnaz.jpeg" alt="Mehrnazi" /><strong>Hi, I'm Mehrnaz.
+		         <p><img  src="images/mehrnaz.png" alt="Mehrnaz" /><strong>Hi, I'm Mehrnaz.
                
 		        <br /><br /> 
 		        Software developer. Interior Designer. Art Lover. traveller. foodie. Animal Lover.  </strong><br />
@@ -65,11 +98,11 @@
                 
             </div>
             
-            <div id="boxModel2">
+            <div class="about_us">
                 <h2>Setareh</h2>
                 <br />
                 
-		         <p><img  src="/students/mtajfar/images/Mehrnaz.jpeg" alt="Mehrnazi" /><strong>Hi, I'm Mehrnaz.
+		         <p><img  src="images/setareh.png" alt="Setareh" /><strong>Hi, I'm Mehrnaz.
                
 		        <br /><br /> 
 		        Software developer. Interior Designer. Art Lover. traveller. foodie. Animal Lover.  </strong><br />
@@ -83,11 +116,11 @@
                 
             </div>
             
-            <div id="boxModel3">
+            <div class="about_us">
                 <h2>Dolly</h2>
                 <br />
                 
-		         <p><img  src="/students/mtajfar/images/Mehrnaz.jpeg" alt="Mehrnazi" /><strong>Hi, I'm Mehrnaz.
+		         <p><img  src="images/dolly.png" alt="Dolly" /><strong>Hi, I'm Mehrnaz.
                
 		        <br /><br /> 
 		        Software developer. Interior Designer. Art Lover. traveller. foodie. Animal Lover.  </strong><br />
@@ -102,26 +135,10 @@
 	        </div>
         
        
-         </div>
-
-
-         <hr />
-                <h3>Current date and time: </h3>
-                <?php
-	    
-	                date_default_timezone_set("Canada/Pacific");   
-	                $today = date("F j,o g:iA.");	
-                    echo "<p>$today</p>";
-
-                    /// Memory Usage Information
-                    echo "<h3>Memory Usage :</h3>";
-                    echo "Initial: ".memory_get_usage()." bytes \n";
-
-                ?>
         <a href="http://validator.w3.org/check?uri=referer">validate</a>
 	
 	    <div id="footer">
-		    <p>Copyright &copy; 2018 <em> Mehrnaz </em></p>
+		    <p>Copyright &copy; 2018 <em> Setareh, Dolly and Mehrnaz </em></p>
 		    <p>No rights reserved.</p>
 	    </div>
     </body>
